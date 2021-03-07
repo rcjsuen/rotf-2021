@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { App } from './components/App';
 
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter basename="/rotf-2021">
     <App />
   </BrowserRouter>,
   document.getElementById('root'),

@@ -4,15 +4,15 @@
   "private": true,
   "description": "Single Page Apps for GitHub Pages",
   "scripts": {
-    "start": "webpack-dev-server --host 0.0.0.0 --disable-host-check --open",
+    "start": "webpack-dev-server --host 0.0.0.0 --disable-host-check --open-page rotf-2021",
     "build": "webpack -p",
     "tsc": "tsc --watch"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rafgraph/spa-github-pages.git"
+    "url": "git+https://github.com/rcjsuen/rotf-2021.git"
   },
-  "author": "Rafael Pedicini <rafael@rafgraph.dev>",
+  "author": "Remy Suen",
   "license": "MIT",
   "dependencies": {
     "prop-types": "^15.7.2",
