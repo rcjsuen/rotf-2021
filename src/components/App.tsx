@@ -38,7 +38,7 @@ const breadcrumbsStyle: CSS.Properties = {
 
 export const App: React.VFC = () => (
   <div style={rootStyle}>
-    <h1 style={titleStyle}>Single Page Apps for GitHub Pages</h1>
+    {/* <h1 style={titleStyle}>Single Page Apps for GitHub Pages</h1>
     <InteractiveLink
       href="https://github.com/rafgraph/spa-github-pages"
       style={repoLinkStyle}
@@ -48,7 +48,7 @@ export const App: React.VFC = () => (
 
     <nav style={breadcrumbsStyle}>
       <Breadcrumbs />
-    </nav>
+    </nav> */}
 
     <Switch>
       <Route exact path="/" component={Home} />
