@@ -22,7 +22,14 @@ export class StatusCard extends React.Component<{ value: string, icon?: string, 
   public render() {
     let moonPhase = <div></div>
     if (this.props.phase === "waxing-gibbous") {
-        moonPhase = <img alt="waxing gibbous icon" width="32" height="32" src="https://static.wikia.nocookie.net/forgottenrealms/images/c/cf/Moon6-waneG.png/revision/latest?cb=20190216014303"/>
+        moonPhase = (
+            <a title="Emoji One, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons"
+                href="https://commons.wikimedia.org/wiki/File:Emojione_1F314.svg">
+                <img width="32"
+                    alt="Emojione 1F314"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Emojione_1F314.svg/512px-Emojione_1F314.svg.png" />
+            </a>
+        )
     }
     let cardClass = `col-xl-${this.props.size} col-md-6 mb-4`;
     return (
