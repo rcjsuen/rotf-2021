@@ -1,6 +1,7 @@
 import * as React from 'react';
 import * as CSS from 'csstype';
 import { InteractiveLink } from './InteractiveLink';
+import { Main } from './Main';
 import { Sidebar } from './Sidebar';
 import { CardDefault } from './Card';
 
@@ -33,13 +34,8 @@ export const Home: React.VFC = () => {
               {/* <!-- Topbar --> */}
               {/* <Topbar /> */}
               {/* <!-- End of Topbar --> */}
-              {/* <Main /> */}
+              <Main />
               {/* {mainDiv} */}
-              <div className="container-fluid" style={{paddingTop: 20}}>
-                    <div className="col-xl-3 col-lg-6">
-                      <CardDefault title="test"/>
-                    </div>
-                </div>
             </div>
             {/* <!-- End of Main Content --> */}
 
