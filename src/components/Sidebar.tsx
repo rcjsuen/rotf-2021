@@ -1,7 +1,7 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 import * as CSS from 'csstype';
 import { InteractiveLink } from './InteractiveLink';
-import { Code, P } from './UI';
 
 const pageLinkContainerStyle: CSS.Properties = {
   display: 'block',
@@ -32,9 +32,9 @@ export const Sidebar: React.VFC = () => {
 
     {/* <!-- Nav Item - Dashboard --> */}
     <li className="nav-item">
-      {/* <Link className="nav-link" to="/">
+      <Link className="nav-link" to="/">
         <i className="fas fa-dice-d20"></i>
-        <span>Rime of the Frostmaiden</span></Link> */}
+        <span>Rime of the Frostmaiden</span></Link>
     </li>
 
     {/* <!-- Divider --> */}
@@ -47,13 +47,13 @@ export const Sidebar: React.VFC = () => {
 
     {/* <!-- Nav Item - Pages Collapse Menu --> */}
     <li className="nav-item">
-      <a className='nav-link collapsed' href="#" data-toggle="collapse" data-target="#collapseTwo"  aria-controls="collapseTwo">
+      <a className='nav-link collapsed' href="/#" data-toggle="collapse" data-target="#collapseTwo"  aria-controls="collapseTwo">
         <i className="fas fa-home"></i>
         <span>Ten Towns</span>
       </a>
       <div id="collapseTwo" className='collapse' aria-labelledby="headingTwo" data-parent="#accordionSidebar">
         <div className="bg-white py-2 collapse-inner rounded">
-          {/* <Link className="collapse-item" to="/towns/bremen">Bremen</Link> */}
+          <Link className="collapse-item" to="/towns/bremen">Bremen</Link>
         </div>
       </div>
     </li>
@@ -66,7 +66,7 @@ export const Sidebar: React.VFC = () => {
       </a>
       <div id="collapseUtilities" className="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
         <div className="bg-white py-2 collapse-inner rounded">
-          {/* <Link className="collapse-item" to="/locations/kelvin's_cairn">Kelvin's Cairn</Link> */}
+          <Link className="collapse-item" to="/locations/kelvin's_cairn">Kelvin's Cairn</Link>
         </div>
       </div>
     </li>
@@ -87,7 +87,7 @@ export const Sidebar: React.VFC = () => {
       </a>
       <div id="collapseBestiary" className="collapse" aria-labelledby="headingBestiary" data-parent="#accordionSidebar">
         <div className="bg-white py-2 collapse-inner rounded">
-          {/* <Link className="collapse-item" to="/bestiary/plesiosaurus">Plesiosaurus</Link> */}
+          <Link className="collapse-item" to="/bestiary/plesiosaurus">Plesiosaurus</Link>
         </div>
       </div>
     </li>
@@ -100,7 +100,7 @@ export const Sidebar: React.VFC = () => {
       </a>
       <div id="collapseNPCs" className="collapse" aria-labelledby="headingNPCs" data-parent="#accordionSidebar">
         <div className="bg-white py-2 collapse-inner rounded">
-          {/* <Link className="collapse-item" to="/npcs/cora_mulphoon">Cora Mulphoon</Link> */}
+          <Link className="collapse-item" to="/npcs/cora_mulphoon">Cora Mulphoon</Link>
         </div>
       </div>
     </li>

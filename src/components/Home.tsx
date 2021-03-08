@@ -2,6 +2,7 @@ import * as React from 'react';
 import * as CSS from 'csstype';
 import { InteractiveLink } from './InteractiveLink';
 import { Sidebar } from './Sidebar';
+import { CardDefault } from './Card';
 
 const pageLinkContainerStyle: CSS.Properties = {
   display: 'block',
@@ -34,6 +35,11 @@ export const Home: React.VFC = () => {
               {/* <!-- End of Topbar --> */}
               {/* <Main /> */}
               {/* {mainDiv} */}
+              <div className="container-fluid" style={{paddingTop: 20}}>
+                    <div className="col-xl-3 col-lg-6">
+                      <CardDefault title="test"/>
+                    </div>
+                </div>
             </div>
             {/* <!-- End of Main Content --> */}
 

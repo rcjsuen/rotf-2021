@@ -37,7 +37,7 @@ const breadcrumbsStyle: CSS.Properties = {
 };
 
 export const App: React.VFC = () => (
-  <div style={rootStyle}>
+  <div>
     {/* <h1 style={titleStyle}>Single Page Apps for GitHub Pages</h1>
     <InteractiveLink
       href="https://github.com/rafgraph/spa-github-pages"
