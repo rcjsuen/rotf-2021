@@ -1,18 +1,5 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
-import * as CSS from 'csstype';
-import { InteractiveLink } from './InteractiveLink';
-
-const pageLinkContainerStyle: CSS.Properties = {
-  display: 'block',
-  margin: '1vh 0',
-};
-
-const RepoReadmeLink: React.VFC = () => (
-  <InteractiveLink href="https://github.com/rafgraph/spa-github-pages#readme">
-    repo readme
-  </InteractiveLink>
-);
 
 export const Sidebar: React.VFC = () => {
   const toggled = false;
@@ -53,7 +40,7 @@ export const Sidebar: React.VFC = () => {
       </a>
       <div id="collapseTwo" className='collapse' aria-labelledby="headingTwo" data-parent="#accordionSidebar">
         <div className="bg-white py-2 collapse-inner rounded">
-          <Link className="collapse-item" to="/towns/bremen">Bremen</Link>
+            <Link className="collapse-item" to={{ pathname: "/towns/bremen", state: { name: "bremen" } }} >Bremen</Link>
         </div>
       </div>
     </li>

@@ -1,11 +1,8 @@
 import * as React from 'react';
 
-export class CardDefault extends React.Component<{ title: string }> {
-  constructor(props: any) {
-    super(props)
-  }
+export class Card extends React.Component<{ title: string }> {
 
-  render() {
+  public render(): JSX.Element {
     return (
       <div className="card shadow mb-4">
         <div className="card-header py-3">

@@ -1,14 +1,15 @@
 import * as React from 'react';
 
-import { BulletList } from './Bulletlist';
+import { BulletList } from './BulletList';
+import { PageHeading } from './PageHeading';
 import { Party } from './Party';
 import { Reputation } from './Reputation';
 import { StatusCard } from './StatusCard';
 
 export class Main extends React.Component {
-  componentWillMount() {
+  // componentWillMount() {
     // document.getElementById('body').className = 'page-top'
-  }
+  // }
 
   render() {
     return (
@@ -16,7 +17,7 @@ export class Main extends React.Component {
 
         {/* <!-- Page Heading --> */}
 
-        {/* <PageHeading title="Rime of the Frostmaiden" /> */}
+        <PageHeading title="Rime of the Frostmaiden" />
 
         {/* <!-- Header Tiles Row --> */}
         <div className="row">

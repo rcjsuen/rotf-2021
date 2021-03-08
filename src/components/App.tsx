@@ -1,13 +1,9 @@
 import * as React from 'react';
 import * as CSS from 'csstype';
-import { InteractiveLink } from './InteractiveLink';
 import { Switch, Route } from 'react-router-dom';
 import { Home } from './Home';
-import { ExampleComponent } from './ExampleComponent';
-import { ExampleTwoDeepComponent } from './ExampleTwoDeepComponent';
-import { SitemapLinkGenerator } from './SitemapLinkGenerator';
-import { PageNotFound } from './PageNotFound';
-import { Breadcrumbs } from './Breadcrumbs';
+import { TextPage } from './TextPage';
+import { TownPage } from './TownPage';
 
 const rootStyle: CSS.Properties = {
   fontFamily: 'helvetica, sans-serif',
@@ -36,34 +32,26 @@ const breadcrumbsStyle: CSS.Properties = {
   margin: '3vh 0',
 };
 
+export function convertName(path: string): string {
+  path = path.substring(path.lastIndexOf("/") + 1);
+  path = path.substring(0, 1).toUpperCase() + path.substring(1);
+  let index = path.indexOf("_");
+  while (index !== -1) {
+    path = path.substring(0, index + 1) + path.substring(index + 1, index + 2).toUpperCase() + path.substring(index + 2);
+    path = path.replace("_", " ")
+    index = path.indexOf("_");
+  }
+  return path
+}
+
 export const App: React.VFC = () => (
   <div>
-    {/* <h1 style={titleStyle}>Single Page Apps for GitHub Pages</h1>
-    <InteractiveLink
-      href="https://github.com/rafgraph/spa-github-pages"
-      style={repoLinkStyle}
-    >
-      https://github.com/rafgraph/spa-github-pages
-    </InteractiveLink>
-
-    <nav style={breadcrumbsStyle}>
-      <Breadcrumbs />
-    </nav> */}
-
     <Switch>
       <Route exact path="/" component={Home} />
-      <Route exact path="/example" component={ExampleComponent} />
-      <Route
-        exact
-        path="/example/two-deep"
-        component={ExampleTwoDeepComponent}
-      />
-      <Route
-        exact
-        path="/sitemap-link-generator"
-        component={SitemapLinkGenerator}
-      />
-      <Route component={PageNotFound} />
+      <Route path="/bestiary" component={TextPage} />
+      <Route path="/locations" component={TextPage} />
+      <Route path="/npcs" component={TextPage} />
+      <Route path="/towns" component={TownPage} />
     </Switch>
   </div>
 );
