@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Card } from './Card';
 import { PageHeading } from './PageHeading';
 
-export class TextContent extends React.Component<{title: string, children?: string}> {
+export class TextContent extends React.Component<{title: string, paragraphs: string[]}> {
 
   public render(): JSX.Element {
     return (
@@ -10,7 +10,7 @@ export class TextContent extends React.Component<{title: string, children?: stri
         <PageHeading title={this.props.title}/>
         <div className="row">
           <div className="col-xl-12 col-lg-6">
-            <Card title="Description" children={this.props.children}/>
+            <Card title="Description" paragraphs={this.props.paragraphs}/>
           </div>
         </div>
       </div>

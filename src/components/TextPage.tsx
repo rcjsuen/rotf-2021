@@ -7,10 +7,10 @@ import { TextContent } from './TextContent';
 export class TextPage extends React.Component {
 
   public render(): JSX.Element {
-    const content = new Map<string, string>();
-    content.set("Cora Mulphoon", "Owner of the Buried Treasures inn in Bremen.");
-    content.set("Kelvin's Cairn", "Kelvin's Cairn is a mountain in Icewind Dale.");
-    content.set("Plesiosaurus", "The plesiosaurus is a large reptile. It has been sighted in the waters around Bremen.");
+    const content = new Map<string, string[]>();
+    content.set("Cora Mulphoon", ["Owner of the Buried Treasures inn in Bremen."]);
+    content.set("Kelvin's Cairn", ["Kelvin's Cairn is a mountain in Icewind Dale."]);
+    content.set("Plesiosaurus", ["The plesiosaurus is a large reptile. It has been sighted in the waters around Bremen."]);
     const name = convertName((this.props as any).location.pathname);
     return (
       <div>
@@ -18,7 +18,7 @@ export class TextPage extends React.Component {
           <Sidebar />
             <div id="content-wrapper" className="d-flex flex-column">
               <div id="content">
-              <TextContent title={name} children={content.get(name)}/>
+              <TextContent title={name} paragraphs={content.get(name) as string[]}/>
               </div>
               <Copyright/>
             </div>
