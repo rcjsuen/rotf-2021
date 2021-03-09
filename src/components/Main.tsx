@@ -36,8 +36,8 @@ export class Main extends React.Component {
           <StatusCard title="Moon Phase"
             size={4}
             color="warning"
-            phase="waxing-gibbous"
-            value="Waxing Gibbous" />
+            phase="waning-gibbous"
+            value="Waning Gibbous" />
         </div>
 
         {/* <!-- Content Row --> */}

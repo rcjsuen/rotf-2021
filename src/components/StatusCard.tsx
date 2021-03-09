@@ -30,6 +30,13 @@ export class StatusCard extends React.Component<{ value: string, icon?: string, 
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Emojione_1F314.svg/512px-Emojione_1F314.svg.png" />
             </a>
         )
+    } else if (this.props.phase === "waning-gibbous") {
+        moonPhase = (
+            <a title="Mozilla, CC BY 4.0 &lt;https://creativecommons.org/licenses/by/4.0&gt;, via Wikimedia Commons"
+                href="https://commons.wikimedia.org/wiki/File:Fxemoji_u1F316.svg">
+                <img width="32" alt="Fxemoji u1F316" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Fxemoji_u1F316.svg/512px-Fxemoji_u1F316.svg.png" />
+            </a>
+        )
     }
     let cardClass = `col-xl-${this.props.size} col-md-6 mb-4`;
     return (
